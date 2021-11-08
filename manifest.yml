@@ -1,0 +1,4 @@
+applications:
+ - name: gestion-financiera
+   random-route: true
+   memory: 164M

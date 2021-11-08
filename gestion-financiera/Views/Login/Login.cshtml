@@ -1,0 +1,114 @@
+
+@model usuario
+
+<div class="contenedor">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="title__login">Bienvenido</h1>
+            <form method="POST" class="form-list">
+                <div class="form-list__row">
+                    <label>Usuario:</label>
+                    <input asp-for="email" placeholder="Email">
+                </div>
+                <div class="form-list__row">
+                    <label>Contraseña:</label>
+                    <input type="password" asp-for="password" placeholder="contraseña">
+                </div>
+                <div class="form-list__row">
+                    <input type="submit" class="btn btn-primary" value="Iniciar Sesion">
+                </div>
+            </form> <br>
+            <div class="text-black">
+                <small>Registrate aqui</a></small>
+            </div><br>
+        </div>
+    </div>  
+</div>
+
+
+<style>
+@@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.contenido{
+    height: 75vh;
+}
+
+.contenedor{
+    width: 60%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.btn1{
+    width: 100%;
+}
+
+.card{
+    padding: 50px;
+}
+
+form{
+    margin: auto;
+    padding: 30px 10px;
+}
+
+.form-list {
+    padding-left: 0;
+    list-style: none; 
+}
+
+.form-list__row {
+    margin-bottom: 25px; 
+}
+
+.form-list__row label {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.form-list__row--inline {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between; 
+}
+
+.form-list__row--inline > :first-child {
+    -ms-flex: 2;
+    flex: 2;
+    padding-right: 20px; }
+
+.form-list__row--inline > :nth-child(2n) {
+    -ms-flex: 1;
+    flex: 1; 
+}
+
+input {
+    width: calc(100% - 10px);
+    min-height: 30px;
+    padding: 5px;
+    letter-spacing: .5px;
+    border: 1.3px solid #E8E8E8; 
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #fbcf34; 
+}
+
+.title__login{
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding: 20px 0;
+    letter-spacing: 1.5px;
+}
+</style>

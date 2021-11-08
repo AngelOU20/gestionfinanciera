@@ -1,0 +1,300 @@
+@model Razones
+<div class="container">
+    <p><h3> RAZON CORRIENTE</h3></p>
+    <div class="row">
+        <div class="col-md-6" >
+            <h6>
+                <p class="estilo" style="text-align: right;">Razon Corriente =</p>        
+            </h6>
+        </div>
+        <div class="col-md-6"  >
+        
+            <h6>
+                <p style="text-decoration: underline" class="estilo">Activos Corrientes</p> <br>
+                <p style="margin-top: -30px;" class="estilo">Pasivos Corrientes</p>
+            </h6>
+        </div>
+    </div>
+</div>
+
+
+
+<table style="text-align: center;margin: 0 auto;width:500px" border="1">
+    <tr style="background-color: #000; color: #fff">
+        <th>
+            Razon Corriente
+        </th>
+        
+    </tr>
+    
+    <tr>
+        <th>
+            <br>
+            <div class="container-fluid">
+                <div class="row" style="margin: auto;">
+                    <div class="col-12">
+                        <form asp-action="RazonCorriente1">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                            <div >
+                                <input asp-for="acorriente1" class="form-control" placeholder="Act. Corriente" style="width:100%;"> 
+                            </div>
+                            
+                            ÷
+
+                            
+                            <div >
+                                <input asp-for="pcorriente1" class="form-control" placeholder="Pas. Corriente" style="width:100%;">
+                            </div>
+                            
+                            <br/>
+                            <CENTER><input type="submit" value="Calcular" class="btn__cal" /></CENTER><br><br>
+                        </form>
+                        <div>
+                            <p class="estilo2">Razon Corriente = @Html.DisplayFor(model => model.Mensaje1)</p> 
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </th>
+    </tr>
+</table>
+
+<br><br>
+<div class="container">
+    <p><h3> PRUEBA ACIDA</h3></p>
+    <div class="row" >
+    
+        <div class="col-md-6" >
+            <h6>
+                <p class="estilo" style="text-align: right;">Prueba Ácida =</p>        
+            </h6>
+        </div>
+        <div class="col-md-6"   >
+        
+            <h6>
+                <p style="text-decoration: underline" class="estilo">Activos Corrientes - Inventario</p> <br>
+                <p style="margin-top: -30px; margin-left: 40px;" class="estilo">Pasivos Corrientes</p>
+            </h6>
+        </div>
+    </div>
+</div>
+
+<table style="text-align: center;margin: 0 auto;width:500px" border="1">
+    <tr style="background-color: #000; color: #fff">
+        <th>
+            Prueba Ácida
+        </th>  
+    </tr>
+    <tr>
+        <th>
+            <br>
+            <div class="container-fluid">
+                <div class="row" style="margin: auto;">
+                    <form asp-action="PruebaAcida1" class="form-inline">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            
+                                <div class="col-md-5">
+                                    <input asp-for="acorriente4" class="form-control" placeholder="Act. Corriente" style="width:100%;"/>
+                                </div>
+                                <div class="col-md-2">
+                                    -
+                                </div>
+                                <div class="col-md-5">
+                                    <input asp-for="inventario4" class="form-control" placeholder="Inventario" style="width:100%;"/>
+                                </div>  
+                            </div> 
+                            <div class="row">
+                                <div class="col-md-5"></div>
+                                <div class="col-md-2">
+                                    ÷
+                                </div>
+                                <div class="col-md-5"></div>
+                                <br>
+                            </div>
+                            <div class="col-md-12">
+                                <input asp-for="pcorriente4" class="form-control" placeholder="Pas. Corriente" style="width:100%;"/>
+                            </div> 
+                        </div>
+                        <br>
+                        <br/>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-12">
+                            <CENTER><input type="submit" value="Calcular" class="btn__cal" /></CENTER>
+                        </div>
+                    </form>
+                    <div>   
+                        <p class="estilo2">Prueba Ácida = @Html.DisplayFor(model => model.Mensaje4)</p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </th>
+    </tr>
+</table>
+<br>
+<br>
+
+
+<div class="container">
+    <p><h3> INDICE LIQUIDEZ</h3></p>
+    <div class="row" >
+    
+        <div class="col-md-6" >
+            <h6>
+                <p class="estilo" style="text-align: right;">Índice Liquidez =</p>        
+            </h6>
+        </div>
+        <div class="col-md-6"  >
+        
+            <h6>
+                <p style="text-decoration: underline" class="estilo">Activos disponibles</p> <br>
+                <p style="margin-top: -30px;" class="estilo">Pasivos Corrientes</p>
+            </h6>
+        </div>
+    </div>
+</div>
+
+<table style="text-align: center;margin: 0 auto;width:500px" border="1">
+    <tr style="background-color: #000; color: #fff">
+        <th>
+           Índice Liquidez
+        </th>
+        
+    </tr>
+    <tr>
+        <th>
+            <br>
+            <div class="container-fluid">
+                <div class="row" style="margin: auto;">
+                    <div class="col-12">
+                        <form asp-action="IndiceLiquidez1">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                            <div >
+                                <input asp-for="adisponible1" class="form-control" placeholder="Act. Disponible" style="width:100%;"> 
+                            </div>
+                            
+                            ÷
+
+                            
+                            <div >
+                                <input asp-for="pcorriente7" class="form-control" placeholder="Pas. Corriente" style="width:100%;">
+                            </div>
+                            
+                            <br/>
+                            <CENTER><input type="submit" value="Calcular" class="btn__cal" /></CENTER><br><br>
+                        </form>
+                        <div>
+                            <p class="estilo2">Índice Liquidez = @Html.DisplayFor(model => model.Mensaje7)</p> 
+                        </div>
+                    </div> 
+                </div>
+            </div>  
+        </th> 
+    </tr>
+</table>
+<br>
+<br>
+
+
+<div class="container">
+    <p><h3>CAPITAL DE TRABAJO</h3></p>
+    <div class="row" >
+    
+        <div class="col-md-6" >
+            <h6>
+                <p class="estilo" style="text-align: right;">Capital de Trabajo =</p>        
+            </h6>
+        </div>
+        <div class="col-md-6"  >
+        
+            <h6>
+                <p class="estilo">Activos Corrientes - Pasivos Corrientes</p> 
+            </h6>
+        </div>
+    </div>
+</div>
+
+<table style="text-align: center;margin: 0 auto;width:500px" border="1">
+    <tr style="background-color: #000; color: #fff">
+        <th>
+            Capital de Trabajo
+        </th>
+        
+    </tr>
+    <tr>
+        <th>
+            <br>
+            <div class="container-fluid">
+                <div class="row" style="margin: auto;">
+                    <form asp-action="CapitalTrabajo1" >
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+                        <div class="row">
+                            <div class="col-5">
+                                <input asp-for="acorriente7" class="form-control" placeholder="Act. Corriente" style="width:100%;"> 
+                            </div>
+                            <div class="col-2">
+                                -
+                            </div>
+                            <div class="col-5">
+                                <input asp-for="pcorriente10" class="form-control" placeholder="Pas. Corriente" style="width:100%;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <CENTER><input type="submit" value="Calcular" class="btn__cal" /></CENTER>
+                        </div>
+                    </form>
+                    <p class="estilo2">Capital de Trabajo = @Html.DisplayFor(model => model.Mensaje10)</p>
+                    <br>
+                        
+                </div>
+            </div>
+            
+        </th>
+    </tr>
+</table>
+
+
+<style>
+h3{
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 25px;
+    letter-spacing: 1.1px;
+}
+
+
+form{
+    height: 70%;
+}
+
+.btn__cal{
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    background-color: #151111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.btn__cal:hover {
+    background-color: #007175;
+}
+
+.btn__cal:focus{
+    outline-style: none;
+}
+</style>
